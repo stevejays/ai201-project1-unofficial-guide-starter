@@ -10,6 +10,10 @@
 ## Domain
 
 <!-- What domain did you choose? Why is this knowledge valuable and hard to find through official channels? -->
+University of Chicago student-generated knowledge about professors, 
+sourced from Rate My Professors. This knowledge is valuable because 
+official channels don't tell you how a professor actually teaches, 
+grades, or treats students — only students who've taken the class know.
 
 ---
 
@@ -20,16 +24,16 @@
 
 | # | Source | Description | URL or location |
 |---|--------|-------------|-----------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| 6 | | | |
-| 7 | | | |
-| 8 | | | |
-| 9 | | | |
-| 10 | | | |
+| 1 | Rate My Professors| Rating Professors | /documents/Michael RoloffLand.txt|
+| 2 | Rate My Professors| Rating Professors | /documents/Faisal AkkawiLand.txt|
+| 3 | Rate My Professors| Rating Professors | /documents/SheeWuLand.txt|
+| 4 | Rate My Professors| Rating Professors | /documents/FangPei CaiLand.txt|
+| 5 | Rate My Professors| Rating Professors | /documents/Sabri CetinkuntLand.txt|
+| 6 | Rate My Professors| Rating Professors | /documents/Peter Ganong.txt|
+| 7 | Rate My Professors| Rating Professors | /documents/Victor LimaLand.txt|
+| 8 | Rate My Professors| Rating Professors | /documents/Stuart GazesLand.txt|
+| 9 | Rate My Professors| Rating Professors | /documents/Kale DaviesLand.txt|
+| 10| Rate My Professors| Rating Professors | /documents/Beatrice FineschiLand.txt|
 
 ---
 
@@ -41,11 +45,20 @@
      A review-heavy corpus warrants different chunking than a long FAQ. -->
 
 **Chunk size:**
+250
 
 **Overlap:**
+50
 
 **Reasoning:**
-
+Individual student reviews are typically 50-200 characters long. 
+A 250-character chunk keeps each review mostly intact as its own 
+semantic unit, avoiding mixing opinions about different aspects 
+(grading, teaching style, difficulty) into a single chunk. This 
+makes retrieval more precise — a question about grading should 
+return chunks about grading, not chunks that mix grading and 
+teaching comments together. Overlap of 50 characters preserves 
+context at chunk boundaries where a review might split.
 ---
 
 ## Retrieval Approach
