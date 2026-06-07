@@ -108,11 +108,14 @@ context at chunk boundaries where a review might split.
 
 ## Architecture
 
-<!-- Draw a diagram of your pipeline showing the five stages:
-     Document Ingestion → Chunking → Embedding + Vector Store → Retrieval → Generation
-     Label each stage with the tool or library you're using.
-     You can use ASCII art, a Mermaid diagram, or embed a sketch as an image.
-     You'll use this diagram as context when prompting AI tools to implement each stage. -->
+```mermaid
+flowchart LR
+    A[Document Ingestion\n.txt files from\nRate My Professors] --> B[Chunking\n250 chars\n50 overlap]
+    B --> C[Embedding\nall-MiniLM-L6-v2\nsentence-transformers]
+    C --> D[Vector Store\nChromaDB]
+    D --> E[Retrieval\nSemantic Search\nTop 3 chunks]
+    E --> F[Generation\nGroq LLM\nllama-3.3-70b-versatile]
+```
 
 ---
 
