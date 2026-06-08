@@ -86,11 +86,11 @@ context at chunk boundaries where a review might split.
 
 | # | Question | Expected answer |
 |---|----------|-----------------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
+| 1 | How is Faisal Akkawi rated?|Faisal Akkawi is rated well He has a rating of 3.3. He teaches real world situation |
+| 2 | How is SheeWu rated? |SheeWu is not rated very well He has a rating of 2.2 out of 5. She manipulates you into unhealthy practice |
+| 3 | Who is rated more than 3 out of 5 |Faisal Akkawi and KaleDavies |
+| 4 | Who has the lowest rating|Peter Ganong |
+| 5 | Who has the highest rating|Beatrice Fineshi |
 
 ---
 
